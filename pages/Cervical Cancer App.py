@@ -4,7 +4,7 @@ import pandas as pd
 st.title("Cervical Cancer App")
 
 
-data = pd.read_csv("..\\pages\\risk_factors_cervical_cancer.csv")
+data = pd.read_csv("pages/risk_factors_cervical_cancer.csv")
 
 
 col1, col2, col3 = st.columns(3)
@@ -46,9 +46,9 @@ bio = True if col1.selectbox("Have you ever received a Biopsy?:", ["Yes", "No"])
 
 
 
-pipeline = joblib.load("..\\pages\\pipe.pkl")
+pipeline = joblib.load("pages/pipe.pkl")
 
-model = joblib.load("..\\pages\\rfc_model.pkl")
+model = joblib.load("pages/rfc_model.pkl")
 
 
 if st.button("Predict"):
